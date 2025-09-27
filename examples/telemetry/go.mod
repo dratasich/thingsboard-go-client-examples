@@ -5,7 +5,7 @@ go 1.23.0
 toolchain go1.24.6
 
 require (
-	github.com/dratasich/thingsboard-go-client-sdk v0.4.0
+	github.com/dratasich/thingsboard-go-client-sdk v0.5.1
 	github.com/rs/zerolog v1.34.0
 	github.com/sethvargo/go-envconfig v1.3.0
 )
