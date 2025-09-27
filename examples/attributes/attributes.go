@@ -63,14 +63,14 @@ func main() {
 	log.Debug().Msg("Waiting for attribute response...")
 	attr := <-tbclient.AttributesResponseQueue
 	// print result
-	log.Info().Msgf("Received attribute response #%s...", attr.Id)
+	log.Info().Msgf("Received attribute response #%d: %+v", attr.RequestId, attr)
 	print("client attributes:\n")
 	for key, value := range *attr.ClientAttr {
-		print(fmt.Sprintf("  %s = %s\n", key, value))
+		print(fmt.Sprintf("  %s = %+v\n", key, value))
 	}
 	print("shared attributes:\n")
 	for key, value := range *attr.SharedAttr {
-		print(fmt.Sprintf("  %s = %s\n", key, value))
+		print(fmt.Sprintf("  %s = %+v\n", key, value))
 	}
 
 	// loop and log attribute updates

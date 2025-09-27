@@ -51,7 +51,7 @@ func main() {
 		for {
 			log.Debug().Msg("Waiting for RPC...")
 			rpc := <-tbclient.RpcQueue
-			log.Info().Msgf("Handling RPC request #%s %s: %s", rpc.RpcRequestId, rpc.Method, rpc.Params)
+			log.Info().Msgf("Handling RPC request #%d %s: %+v", rpc.RpcRequestId, rpc.Method, rpc.Params)
 
 			var response_json []byte
 
